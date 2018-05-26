@@ -20,27 +20,37 @@
                 <br>
                 {{#if filter}}
                         {{#each filteredTodos as |todo|}}
-                                <div class='card card-block bg-faded'>
-                                        <h4>
-                                                {{todo.title}}
-                                                <span class="label label-primary pull-right">
+                                <div class='card card-body bg-light'>
+                                        <h4 class="text-muted">
+                                                {{#link-to 'todos.edit' todo.id}}
+                                                        {{todo.title}}
+                                                {{/link-to}}
+                                                <span class="badge badge-secondary float-right">
                                                         {{format-date todo.date}}
                                                 </span>
                                         </h4>
-                                        {{todo.body}}
+                                        <p class="text-muted">
+                                                {{todo.body}}
+                                        </p>
                                 </div>
+                                <br>
                         {{/each}}
                 {{else}}
                         {{#each sortedTodos as |todo|}}
-                                <div class='card card-block bg-faded'>
-                                        <h4>
-                                                {{todo.title}}
-                                                <span class="label label-primary pull-right">
+                                <div class='card card-body bg-light'>
+                                        <h4 class="text-muted">
+                                                {{#link-to 'todos.edit' todo.id}}
+                                                        {{todo.title}}
+                                                {{/link-to}}
+                                                <span class="badge badge-secondary float-right">
                                                         {{format-date todo.date}}
                                                 </span>
                                         </h4>
-                                        {{todo.body}}
+                                        <p class="text-muted">
+                                                {{todo.body}}
+                                        </p>
                                 </div>
+                                <br>
                         {{/each}}
                 {{/if}}
         </div>
