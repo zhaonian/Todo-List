@@ -15,4 +15,8 @@
                 Submit
         </button>
         {{#link-to 'todos' class='btn btn-default'}}Close{{/link-to}}
+
+        <button {{action 'deleteTodo' model.id}} class="btn btn-danger float-right">
+                Delete
+        </button>
 </form>
