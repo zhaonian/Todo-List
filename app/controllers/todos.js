@@ -12,7 +12,7 @@ export default Controller.extend({
 
         // search filter
         filter: '',
-        filteredTodos: function() {
+        filteredTodos: computed('filter', function() {
                 let filter = this.get('filer');
                 let rx = new RegExp(filter, 'gi');
                 let todos = this.model;
@@ -20,5 +20,5 @@ export default Controller.extend({
                 return todos.filter(function(todo) {
                         return todo.get('title').match(rx) || todo.get('body').match(rx);
                 });
-        }
+        })
 });
