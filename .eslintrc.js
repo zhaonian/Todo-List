@@ -11,7 +11,8 @@ module.exports = {
         },
         rules: {},
         globals: {
-                "moment": true
+                "moment": true,
+                "showdown": true
         },
         overrides: [
                 // node files
