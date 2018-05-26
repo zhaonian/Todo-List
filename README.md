@@ -1,7 +1,8 @@
-# todo-list
+# Todo List
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a todo list built with ember.js
+The backend is just a simple firebase.
+Ember is cute.
 
 ## Prerequisites
 
